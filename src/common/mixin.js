@@ -1,5 +1,6 @@
 import {debounce} from './utils.js'
 import BackTop from 'components/content/backTop/BackTop'
+import {POP, SELL, NEW} from "common/const";
 
 export const itemListenerMixin = {
   data(){

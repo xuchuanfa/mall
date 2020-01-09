@@ -1,14 +1,14 @@
 <template>
   <div id="detail">
-    <detail-nav-bar class="detail-nav" ref="nav" @titleClick="titleClick" />
+    <detail-nav-bar class="detail-nav" ref="nav" @titleClick="titleClick"/>
     <scroll class="content" ref="scroll" :probe-type="3" @scroll="contentScroll">
-      <detail-swiper :top-images='topImages' @imageLoad="imageLoad" />
-      <detail-base-info :goods="goods" />
-      <detail-service :services="goods.services" @serviceClick="serviceClick" />
-      <detail-shop-info :shop="shop" />
-      <detail-goods-info :detail-info="detailInfo" @goodsImgLoad="goodsImgLoad" />
-      <detail-param-info ref="params" :param-info="paramInfo" />
-      <detail-comment-info ref="comment" :rate="rate" />
+      <detail-swiper :top-images='topImages' @imageLoad="imageLoad"/>
+      <detail-base-info :goods="goods"/>
+      <detail-service :services="goods.services" @serviceClick="serviceClick"/>
+      <detail-shop-info :shop="shop"/>
+      <detail-goods-info :detail-info="detailInfo" @goodsImgLoad="goodsImgLoad"/>
+      <detail-param-info ref="params" :param-info="paramInfo"/>
+      <detail-comment-info ref="comment" :rate="rate"/>
       <goods-list ref="recommend" :goods="recommends" class="recomm" />
     </scroll>
     <detail-bottom-nav @addToCart="addToCart" />

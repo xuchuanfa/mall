@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import { Lazyload, Swipe, SwipeItem, Toast, Icon,Popup } from 'vant';
+import { Lazyload, Swipe, SwipeItem, Toast, Icon, Popup } from 'vant';
 import store from './store'
 
 import FastClick from 'fastclick'
