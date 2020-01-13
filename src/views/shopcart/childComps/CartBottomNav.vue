@@ -7,6 +7,7 @@
     <div class="right flex flex-1 flex-ac">
       <div class="total">合计: <span class="money">{{'￥' + cartTotalMoney}}</span></div>
       <div class="settle" @click="settle">结算</div>
+      <!-- <van-button type="danger" round  style="width: 100px;font-size: 16px;margin-left: 8px;"></van-button> -->
     </div>
   </div>
 </template>
@@ -38,6 +39,7 @@
           this.$toast2.show('请先勾选商品')
           return
         }
+        this.$emit('wxPay')
       }
     },
     components: {
@@ -50,7 +52,7 @@
   .bottom-nav{
     background-color: #FFFFFF;
     padding: 0 12px;
-    height: 46px;
+    height: 50px;
     width: 100%;
     box-sizing: border-box;
   }
@@ -68,7 +70,7 @@
   }
   .total{
     color: #323233;
-    line-height: 46px;
+    line-height: 50px;
   }
   .total .money{
     color: #ee0a24;
@@ -80,7 +82,7 @@
     text-align: center;
     line-height: 40px;
     border-radius: 20px;
-    background-color: #ee0a24;
+    background: linear-gradient(to right, #ff6034, #ee0a24);
     color: #FFFFFF;
     margin-left: 8px;
   }

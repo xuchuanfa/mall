@@ -8,7 +8,12 @@
     <cart-list/>
 
     <!-- 底部汇总 -->
-    <cart-bottom-nav/>
+    <cart-bottom-nav @wxPay="isShow = true"/>
+    <van-popup v-model="isShow">
+      <div class="wx-img">
+        <img src="~assets/img/wx/wx-pay.png" alt="" style="width: 100%;">
+      </div>
+    </van-popup>
   </div>
 </template>
 
@@ -23,6 +28,11 @@
 
   export default {
     name: 'shopcart',
+    data(){
+      return {
+        isShow: false
+      }
+    },
     computed: {
       // 使用对象展开运算符将 getter 混入 computed 对象中
       ...mapGetters(['cartLength'])
@@ -42,5 +52,8 @@
   .cart-nav{
     background-color: var(--color-tint);
     color: #FFFFFF;
+  }
+  .wx-img{
+    width: 280px;
   }
 </style>

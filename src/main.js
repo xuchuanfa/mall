@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import { Lazyload, Swipe, SwipeItem, Toast, Icon, Popup } from 'vant';
+import { Lazyload, Swipe, SwipeItem, Toast, Icon, Popup, Button } from 'vant';
 import store from './store'
 
 import FastClick from 'fastclick'
@@ -13,6 +13,7 @@ Vue.use(Lazyload);
 Vue.use(Toast);
 Vue.use(Icon);
 Vue.use(Popup);
+Vue.use(Button );
 Vue.use(Swipe).use(SwipeItem);
 
 //解决移动端300ms延迟
