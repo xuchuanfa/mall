@@ -23,9 +23,13 @@
       isSelectAll(){
         if(this.cartList.length === 0) return false
         return !this.cartList.find(item => !item.checked)
+      },
+      isSubmission(){
+        if(this.cartList.length === 0) return false
+        return this.cartList.some(item => item.checked)
       }
     },
-    methods: {
+    methods: {  
       checkClick(){
         if(this.isSelectAll){ //全部选中
           this.cartList.forEach(item => item.checked = false)
@@ -35,7 +39,7 @@
         // this.cartList.forEach(item => item.checked = !this.isSelectAll)
       },
       settle(){
-        if(!this.isSelectAll) {
+        if(!this.isSubmission) {
           this.$toast2.show('请先勾选商品')
           return
         }

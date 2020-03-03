@@ -33,7 +33,7 @@
   } from "network/category";
 
   export default {
-    name: 'profile',
+    name: 'category',
     mixins: [itemListenerMixin],
     data(){
       return {

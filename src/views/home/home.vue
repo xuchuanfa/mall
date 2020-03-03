@@ -31,6 +31,7 @@
   import {itemListenerMixin, backTopMixin} from 'common/mixin'
 
   export default {
+    name: 'home',
     mixins: [itemListenerMixin, backTopMixin],
     data(){
       return {
